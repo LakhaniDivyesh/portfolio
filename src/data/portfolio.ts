@@ -64,29 +64,29 @@ export const profile = {
 
 export const skills = {
   Frontend: [
-    { name: "JavaScript", icon: "📜" },
-    { name: "React.js", icon: "⚛️" },
-    { name: "Next.js", icon: "▲" },
-    { name: "Bootstrap", icon: "🎨" },
+    { name: "JavaScript", icon: "https://img.icons8.com/color/48/javascript--v1.png" },
+    { name: "React.js", icon: "https://img.icons8.com/color/48/react-native.png" },
+    { name: "Next.js", icon: "https://images.icon-icons.com/2389/PNG/512/next_js_logo_icon_145038.png" },
+    { name: "Bootstrap", icon: "https://img.icons8.com/color-glass/48/bootstrap.png" },
   ],
   Backend: [
-    { name: "Node.js", icon: "🟢" },
-    { name: "NestJS", icon: "🏗️" },
-    { name: "Express.js", icon: "🚀" },
-    { name: "Socket.io", icon: "🔌" },
+    { name: "Node.js", icon: "https://img.icons8.com/fluency/48/node-js.png" },
+    { name: "NestJS", icon: "https://img.icons8.com/color/48/nestjs.png" },
+    { name: "Express.js", icon: "https://img.icons8.com/nolan/64/express-js.png" },
+    { name: "Socket.io", icon: "https://socket.io/images/logo-dark.svg" },
   ],
   Databases: [
-    { name: "MySQL", icon: "🐬" },
-    { name: "PostgreSQL", icon: "🐘" },
-    { name: "MongoDB", icon: "🍃" },
-    { name: "Sequelize ORM", icon: "📦" },
+    { name: "MySQL", icon: "https://img.icons8.com/color/48/mysql-logo.png" },
+    { name: "PostgreSQL", icon: "https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/external-postgre-sql-a-free-and-open-source-relational-database-management-system-logo-color-tal-revivo.png" },
+    { name: "MongoDB", icon: "https://img.icons8.com/color/48/mongo-db.png" },
+    { name: "Sequelize ORM", icon: "https://sequelize.org/img/logo.svg" },
   ],
   Tools: [
-    { name: "Git", icon: "📦" },
-    { name: "Postman", icon: "📬" },
-    { name: "Firebase", icon: "🔥" },
-    { name: "Stripe", icon: "💳" },
-    { name: "Google Maps API", icon: "🗺️" },
+    { name: "Git", icon: "https://img.icons8.com/3d-fluency/94/github-logo.png" },
+    { name: "Postman", icon: "https://icon.icepanel.io/Technology/svg/Postman.svg" },
+    { name: "Firebase", icon: "https://img.icons8.com/color/48/firebase.png" },
+    { name: "Stripe", icon: "https://logos-world.net/wp-content/uploads/2022/12/Stripe-Emblem.png" },
+    { name: "Google Maps API", icon: "https://img.icons8.com/color/48/google-maps.png" },
   ],
 };
 
