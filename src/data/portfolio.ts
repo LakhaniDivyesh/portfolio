@@ -268,7 +268,7 @@ export const projects = [
     tech: ["React.js", "Node.js", "PostgreSQL", "Google Maps API", "Stripe"],
     description:
       "Multi-role courier management system supporting customers, drivers, fleet owners, and admins.",
-    image: "/logistic-app2.png",
+    image: "/logistic-app.png",
     features: [
       "Role-based access control (RBAC)",
       "Live tracking and ETA",
