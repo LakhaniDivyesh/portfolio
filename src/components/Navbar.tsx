@@ -23,7 +23,10 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-6">
-        <a href="#home" className="font-cinzel text-xl font-bold text-gradient-accent">
+        <a
+          href="#home"
+          className="font-cinzel text-xl font-bold text-gradient-accent"
+        >
           DL
         </a>
 
@@ -63,7 +66,21 @@ const Navbar = () => {
                 <a
                   key={link.href}
                   href={link.href}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+
+                    const id = link.href.replace("#", "");
+                    const el = document.getElementById(id);
+
+                    setMobileOpen(false);
+
+                    setTimeout(() => {
+                      el?.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                      });
+                    }, 200);
+                  }}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors py-2"
                 >
                   {link.label}

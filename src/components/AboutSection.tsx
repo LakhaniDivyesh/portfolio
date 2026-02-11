@@ -17,7 +17,7 @@ const AboutSection = () => (
           <img
             src={profile.avatar}
             alt={profile.name}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover" 
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
         </div>

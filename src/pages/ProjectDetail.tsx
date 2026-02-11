@@ -1,17 +1,29 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useLocation } from "react-router-dom";
 import { projects } from "@/data/portfolio";
 import { motion } from "framer-motion";
 import { ArrowLeft, ExternalLink, Github } from "lucide-react";
+import { useEffect } from "react";
 
 const ProjectDetail = () => {
   const { id } = useParams<{ id: string }>();
   const project = projects.find((p) => p.id === id);
 
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [location.pathname]);
+
   if (!project) {
     return (
       <div className="cinematic-bg min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="font-cinzel text-4xl text-foreground mb-4">Project Not Found</h1>
+          <h1 className="font-cinzel text-4xl text-foreground mb-4">
+            Project Not Found
+          </h1>
           <Link to="/" className="text-primary hover:underline">
             ← Return Home
           </Link>
@@ -36,6 +48,18 @@ const ProjectDetail = () => {
           <ArrowLeft size={16} />
           Back
         </Link>
+      </motion.div>
+
+      {/* Project Type Label */}
+      <motion.div
+        className="fixed top-6 right-6 z-50"
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className="glass-glow px-4 py-2 rounded-lg text-sm font-semibold text-primary border border-primary/30 tracking-wide uppercase">
+          Company Project
+        </div>
       </motion.div>
 
       {/* Hero image */}
@@ -76,7 +100,9 @@ const ProjectDetail = () => {
 
           {/* Description card */}
           <div className="glass-glow rounded-xl p-8 mb-8">
-            <h2 className="font-cinzel text-xl font-semibold text-foreground mb-4">Overview</h2>
+            <h2 className="font-cinzel text-xl font-semibold text-foreground mb-4">
+              Overview
+            </h2>
             <p className="text-muted-foreground leading-relaxed text-lg">
               {project.description}
             </p>
@@ -88,7 +114,7 @@ const ProjectDetail = () => {
               Key Features
             </h2>
             <ul className="space-y-3">
-              {(project.features).map((feature, i) => (
+              {project.features.map((feature, i) => (
                 <motion.li
                   key={i}
                   className="flex items-start gap-3 text-muted-foreground"
@@ -104,7 +130,7 @@ const ProjectDetail = () => {
           </div>
 
           {/* Links */}
-          <div className="flex gap-4">
+          {/* <div className="flex gap-4">
             <a
               href="#"
               className="glass-glow px-6 py-3 rounded-lg flex items-center gap-2 text-foreground hover:border-primary/40 transition-all"
@@ -119,7 +145,7 @@ const ProjectDetail = () => {
               <Github size={16} />
               Source Code
             </a>
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </div>
